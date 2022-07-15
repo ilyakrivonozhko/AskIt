@@ -1,11 +1,13 @@
 class QuestionsController < ApplicationController
-    before_action :set_question, except: [:index, :new, :create]
+    before_action :set_question!, except: [:index, :new, :create]
 
     def index
-        @questions = Question.all
+        @questions = Question.order created_at: :desc
     end
 
     def show
+        @answer = @question.answers.build
+        @answers = @question.answers.order created_at: :desc
     end
 
     def new
@@ -46,7 +48,7 @@ class QuestionsController < ApplicationController
         params.require(:question).permit(:title, :body)
     end
 
-    def set_question
+    def set_question!
         @question = Question.find params[:id]
     end
 end
