@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
     end
 
     def destroy
-        answer.destroy
+        @answer.destroy
         flash[:success] = "Answer deleted!"
         redirect_to question_path @question
     end
