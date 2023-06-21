@@ -38,6 +38,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @answer = @question.answers.build
+    @answers = Answer.order created_at: :desc
   end
 
   private 
