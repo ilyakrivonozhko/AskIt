@@ -16,7 +16,7 @@
         </time>
 
         <div class="my-2">
-          <%= sanitize question.body %>
+          <%= truncate sanitize(question.body), length: 150, omission: '... (continued)' %>
         </div>
       </section>
 
