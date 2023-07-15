@@ -8,7 +8,7 @@ class AnswersController < ApplicationController
       flash[:success] = "Answer created!"
       redirect_to question_path(@question)
     else
-      @answers = Answer.order created_at: :desc
+      @answers = Answer.order(created_at: :desc).page params[:page]
       render 'questions/show'
     end
   end
