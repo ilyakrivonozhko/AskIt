@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :questions do
       resources :answers, only: %i[create edit update destroy]
   end
+  resources :users, only: %i[new create]
 end
