@@ -117,7 +117,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.18.1)
-    msgpack (1.7.1)
+    msgpack (1.7.2)
     net-imap (0.3.6)
       date
       net-protocol
@@ -183,6 +183,9 @@ GEM
     timeout (0.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    valid_email2 (4.0.6)
+      activemodel (>= 3.2)
+      mail (~> 2.5)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -211,6 +214,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   tzinfo-data
+  valid_email2 (~> 4.0)
   web-console
 
 RUBY VERSION

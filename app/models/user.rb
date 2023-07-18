@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validate :password_presence
   validate :correct_old_password, on: :update, if -> { password.present? }
+  validates :email, presence: true, 'valid_email_2/email': true
 
   private
 
