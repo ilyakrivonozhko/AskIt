@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       resources :answers, only: %i[create edit update destroy]
   end
   resources :users, only: %i[new create]
+  resource :session, only: %i[new create destroy]
 end
