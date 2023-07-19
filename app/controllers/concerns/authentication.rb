@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 module Authentication
   extend ActiveSupport::Concern
+  # rubocop:disable Metrics/BlockLength
   included do
     private
-    
+
     def current_user
       user = session[:user_id].present? ? user_from_session : user_from_token
 
@@ -23,7 +26,6 @@ module Authentication
       user
     end
 
-
     def user_signed_in?
       current_user.present?
     end
@@ -40,13 +42,15 @@ module Authentication
 
     def require_authentication
       return if user_signed_in?
-      flash[:warning] = "You are not signed in!"
+
+      flash[:warning] = 'You are not signed in!'
       redirect_to root_path
     end
 
     def require_no_authentication
       return unless user_signed_in?
-      flash[:warning] = "You are already signed in!"
+
+      flash[:warning] = 'You are already signed in!'
       redirect_to root_path
     end
 
@@ -61,7 +65,8 @@ module Authentication
       cookies.delete :user_id
       cookies.delete :remember_token
     end
-    
+
     helper_method :current_user, :user_signed_in?
   end
+  # rubocop:enable Metrics/BlockLength
 end
