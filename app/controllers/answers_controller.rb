@@ -14,6 +14,7 @@ class AnswersController < ApplicationController
     else
       @question = @question.decorate
       @pagy, @answers = pagy Answer.order(created_at: :desc)
+      @answers = @answers.decorate
       render 'questions/show'
     end
   end
