@@ -40,9 +40,14 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
+gem 'activerecord-import', '~> 1.2'
 gem 'bootsnap', require: false
-gem 'draper', '~>4.0'
-gem 'valid_email2', '~>4.0'
+gem 'caxlsx', '~> 3.1'
+gem 'caxlsx_rails', '~> 0.6'
+gem 'draper', '~> 4.0'
+gem 'rubyXL', '~> 3.4'
+gem 'rubyzip', '~> 2'
+gem 'valid_email2', '~> 4.0'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -58,7 +63,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'rubocop', '~>1.54', require: false
+  gem 'rubocop', '~> 1.54', require: false
   gem 'rubocop-performance', '~> 1.11 ', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
   gem 'web-console'
