@@ -42,12 +42,16 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'activerecord-import', '~> 1.2'
 gem 'bootsnap', require: false
+
 gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'draper', '~> 4.0'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
+
 gem 'valid_email2', '~> 4.0'
+
+gem 'rails-i18n', '~> 7.0.0'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
