@@ -85,7 +85,7 @@ ru:
   sessions:
     create:
       invalid_creds: Неверный email и/или пароль!
-      success: С возвращением, %{name}!
+      success: С возвращением,
     destroy:
       success: До новых встреч!
     new:
@@ -97,7 +97,7 @@ ru:
       title: Войти
   users:
     create:
-      success: Добро пожаловать, %{name}!
+      success: Добро пожаловать,
     edit:
       title: Редактировать профиль
     global:

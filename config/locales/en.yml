@@ -86,7 +86,7 @@ en:
   sessions:
     create:
       invalid_creds: Incorrect email and/or password!
-      success: Welcome back, %{name}!
+      success: Welcome back,
     destroy:
       success: See you later!
     new:
@@ -98,7 +98,7 @@ en:
       title: Log In
   users:
     create:
-      success: Welcome to the app, %{name}!
+      success: Welcome to the app,
     edit:
       title: Edit profile
     global:
