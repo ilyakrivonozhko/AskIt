@@ -53,6 +53,9 @@ gem 'valid_email2', '~> 4.0'
 
 gem 'rails-i18n', '~> 7.0.0'
 
+gem 'lokalise_rails', '~> 2'
+gem 'dotenv-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
