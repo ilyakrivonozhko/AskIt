@@ -14,6 +14,8 @@ class User < ApplicationRecord
   has_many :questions, dependent: :destroy
   has_many :answers, dependent: :destroy
 
+  before_save :set_gravatar_hash, if: :email_changed? 
+
   def remember_me
     self.remember_token = SecureRandom.urlsafe_base64
     # rubocop:disable Rails/SkipsModelValidations
@@ -35,6 +37,12 @@ class User < ApplicationRecord
   end
 
   private
+
+  def set_gravatar_hash
+    return unless email.present?
+    hash = Digest::MD5.hexdigest email.strip.downcase
+    self.gravatar_hash = hash
+  end
 
   def digest(string)
     cost = if ActiveModel::SecurePassword
